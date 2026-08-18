@@ -698,6 +698,41 @@ function setupGuideBooking() {
   });
 }
 
+function appendChatMessage(text, sender) {
+  const messages = document.getElementById('chat-messages');
+  if (!messages) return;
+  const message = document.createElement('div');
+  message.className = `chat-message chat-message-${sender}`;
+  message.textContent = text;
+  messages.appendChild(message);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function setupGuideChat() {
+  document.querySelectorAll('.btn-accept-request').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.dataset.guideName;
+      const topic = button.dataset.guideTopic;
+      document.getElementById('chat-name').textContent = name;
+      document.getElementById('chat-topic').textContent = topic;
+      document.getElementById('chat-avatar').textContent = name.charAt(0);
+      navigateTo('guide-chat');
+    });
+  });
+
+  document.getElementById('chat-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    const input = document.getElementById('chat-input');
+    const message = input.value.trim();
+    if (!message) return;
+    appendChatMessage(message, 'guide');
+    input.value = '';
+    setTimeout(() => {
+      appendChatMessage('Terima kasih. Saya akan semak maklumat itu dan bantu anda dengan langkah seterusnya.', 'user');
+    }, 700);
+  });
+}
+
 function setupReportButton() {
   document.getElementById('btn-report')?.addEventListener('click', () => {
     showToast('toastReport');
@@ -711,6 +746,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupApplyFlow();
   setupInterviewPractice();
   setupGuideBooking();
+  setupGuideChat();
   setupReportButton();
   setLanguage('ms');
 });

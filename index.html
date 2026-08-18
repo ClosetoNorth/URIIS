@@ -516,7 +516,7 @@
             <p>Perlukan bantuan semak permohonan · Operator Kilang</p>
             <span class="request-time">2 jam lalu</span>
           </div>
-          <button class="btn btn-primary btn-sm">Terima</button>
+          <button class="btn btn-primary btn-sm btn-accept-request" data-guide-name="Siti Aminah" data-guide-topic="semak permohonan">Terima</button>
         </div>
         <div class="request-card">
           <div class="request-avatar">K</div>
@@ -525,7 +525,7 @@
             <p>Latihan temuduga · Pembantu Gudang</p>
             <span class="request-time">5 jam lalu</span>
           </div>
-          <button class="btn btn-primary btn-sm">Terima</button>
+          <button class="btn btn-primary btn-sm btn-accept-request" data-guide-name="Kumar Raj" data-guide-topic="latihan temuduga">Terima</button>
         </div>
         <div class="request-card">
           <div class="request-avatar">L</div>
@@ -534,7 +534,7 @@
             <p>Semak resume · Pembantu Dapur</p>
             <span class="request-time">Semalam</span>
           </div>
-          <button class="btn btn-primary btn-sm">Terima</button>
+          <button class="btn btn-primary btn-sm btn-accept-request" data-guide-name="Lee Wei Ming" data-guide-topic="semak resume">Terima</button>
         </div>
 
         <h3 class="section-heading">Sesi Akan Datang</h3>
@@ -559,6 +559,38 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Screen 10: Career Guide Sample Chat -->
+    <section id="screen-guide-chat" class="screen" data-screen="guide-chat">
+      <header class="screen-header screen-header-dark">
+        <button class="btn-back btn-back-light" data-nav="guide-dashboard" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Sesi Bimbingan</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="chat-person">
+        <span class="request-avatar" id="chat-avatar">S</span>
+        <div>
+          <h2 id="chat-name">Siti Aminah</h2>
+          <p id="chat-topic">Semak permohonan</p>
+        </div>
+        <span class="chat-status">Dalam talian</span>
+      </div>
+
+      <div class="chat-messages" id="chat-messages" aria-live="polite">
+        <div class="chat-message chat-message-user">Terima kasih kerana sudi membantu. Saya mahu semak permohonan kerja saya.</div>
+        <div class="chat-message chat-message-guide">Sama-sama. Mari kita lihat jawatan yang anda mohon dan pengalaman yang paling berkaitan.</div>
+        <div class="chat-message chat-message-user">Saya memohon jawatan Operator Kilang di Shah Alam.</div>
+      </div>
+
+      <form class="chat-composer" id="chat-form">
+        <label class="sr-only" for="chat-input">Tulis mesej</label>
+        <input id="chat-input" type="text" placeholder="Tulis mesej kepada pencari kerja..." autocomplete="off">
+        <button class="btn btn-primary" type="submit">Hantar</button>
+      </form>
     </section>
   </div>
 
