@@ -1,0 +1,9 @@
+{
+  "name": "kerjabersama",
+  "version": "1.0.0",
+  "description": "KerjaBersama — Voice-first job matching prototype for Malaysia",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -p 3000"
+  }
+}

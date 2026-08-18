@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="KerjaBersama — Platform padanan kerja suara untuk rakyat Malaysia">
+  <title>KerjaBersama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- Screen 1: Welcome -->
+    <section id="screen-welcome" class="screen active" data-screen="welcome">
+      <header class="welcome-header">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="#0D4F6C"/>
+            <path d="M14 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="24" cy="18" r="5" fill="#F4C430"/>
+            <path d="M10 34h28" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h1 class="brand-name">KerjaBersama</h1>
+      </header>
+
+      <div class="welcome-hero">
+        <h2 class="headline" data-i18n="headline">Cari kerja, lebih mudah.</h2>
+        <p class="subtext" data-i18n="subtext">Cakap sahaja. Kami bantu cari kerja berdekatan anda.</p>
+      </div>
+
+      <div class="lang-selector" role="group" aria-label="Pilih bahasa">
+        <button class="lang-btn active" data-lang="ms" aria-pressed="true">BM</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+        <button class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-btn" data-lang="ta" aria-pressed="false">தமிழ்</button>
+      </div>
+
+      <div class="welcome-actions">
+        <button class="btn btn-primary btn-large" data-nav="job-seeker-home">
+          <span class="btn-icon" aria-hidden="true">🔍</span>
+          <span data-i18n="seekJob">Saya mencari kerja</span>
+        </button>
+        <button class="btn btn-secondary btn-large" data-nav="guide-dashboard">
+          <span class="btn-icon" aria-hidden="true">🤝</span>
+          <span data-i18n="beGuide">Saya mahu jadi Career Guide</span>
+        </button>
+      </div>
+
+      <footer class="welcome-footer">
+        <p class="trust-note">
+          <svg class="inline-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span data-i18n="trustFooter">Perkhidmatan awam digital yang selamat &amp; dipercayai</span>
+        </p>
+      </footer>
+    </section>
+
+    <!-- Screen 2: Job Seeker Home -->
+    <section id="screen-job-seeker-home" class="screen" data-screen="job-seeker-home">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="welcome" data-i18n-aria="back" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title" data-i18n="titleHome">KerjaBersama</h1>
+        <div class="header-spacer"></div>
+      </header>
+      <div class="lang-strip" role="group" aria-label="Pilih bahasa">
+        <button class="lang-strip-btn active" data-lang="ms" aria-pressed="true">BM</button>
+        <button class="lang-strip-btn" data-lang="en" aria-pressed="false">English</button>
+        <button class="lang-strip-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-strip-btn" data-lang="ta" aria-pressed="false">தமிழ்</button>
+      </div>
+
+      <div class="screen-body">
+        <p class="greeting" data-i18n="greeting">Assalamualaikum! Apakah kerja yang anda cari?</p>
+
+        <div class="voice-section">
+          <button class="mic-button" id="btn-mic" data-i18n-aria="micLabel" aria-label="Tekan dan cakap">
+            <div class="mic-ring"></div>
+            <div class="mic-inner">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              </svg>
+            </div>
+          </button>
+          <p class="mic-label" data-i18n="micLabel">Tekan dan cakap</p>
+        </div>
+
+        <div class="example-bubble">
+          <span class="example-label" data-i18n="exampleLabel">Contoh:</span>
+          <p data-i18n="exampleVoice">"Saya cari kerja kilang dekat sini."</p>
+        </div>
+
+        <button class="btn btn-outline btn-large" data-nav="ai-profile">
+          <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span data-i18n="typeRequest">Taip permintaan saya</span>
+        </button>
+
+        <div class="trust-banner">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span data-i18n="trustBanner">Hanya majikan yang disahkan dipaparkan.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: AI Profile Creation -->
+    <section id="screen-ai-profile" class="screen" data-screen="ai-profile">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="job-seeker-home" data-i18n-aria="back" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title" data-i18n="titleProfile">Profil Anda</h1>
+        <div class="header-spacer"></div>
+      </header>
+      <div class="lang-strip" role="group" aria-label="Pilih bahasa">
+        <button class="lang-strip-btn active" data-lang="ms" aria-pressed="true">BM</button>
+        <button class="lang-strip-btn" data-lang="en" aria-pressed="false">English</button>
+        <button class="lang-strip-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-strip-btn" data-lang="ta" aria-pressed="false">தமிழ்</button>
+      </div>
+
+      <div class="screen-body">
+        <div class="ai-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="aiBuilding">AI sedang menyusun profil anda</span>
+        </div>
+
+        <div class="voice-transcript">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+          <p data-i18n="voiceTranscript">"Saya cari kerja kilang dekat Shah Alam, full-time. Saya ada pengalaman 2 tahun."</p>
+        </div>
+
+        <div class="profile-card">
+          <h3 data-i18n="profileTitle">Profil Kerja Anda</h3>
+          <p class="profile-hint" data-i18n="profileHint">Anda boleh sunting maklumat di bawah</p>
+
+          <div class="profile-field">
+            <label for="role" data-i18n="labelRole">Peranan pilihan</label>
+            <input type="text" id="role" value="Operator Kilang">
+          </div>
+          <div class="profile-field">
+            <label for="location" data-i18n="labelLocation">Lokasi</label>
+            <input type="text" id="location" value="Shah Alam">
+          </div>
+          <div class="profile-field">
+            <label for="availability" data-i18n="labelAvailability">Ketersediaan</label>
+            <select id="availability">
+              <option selected data-i18n="optFullTime">Full-time</option>
+              <option data-i18n="optPartTime">Part-time</option>
+              <option data-i18n="optShift">Shift</option>
+            </select>
+          </div>
+          <div class="profile-field">
+            <label for="experience" data-i18n="labelExperience">Pengalaman</label>
+            <input type="text" id="experience" value="2 tahun">
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-large btn-full" data-nav="job-matches">
+          <span data-i18n="findJobs">Cari kerja yang sesuai</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Screen 4: Job Matches -->
+    <section id="screen-job-matches" class="screen" data-screen="job-matches">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="ai-profile" data-i18n-aria="back" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title" data-i18n="titleMatches">Kerja Sesuai</h1>
+        <div class="header-spacer"></div>
+      </header>
+      <div class="lang-strip" role="group" aria-label="Pilih bahasa">
+        <button class="lang-strip-btn active" data-lang="ms" aria-pressed="true">BM</button>
+        <button class="lang-strip-btn" data-lang="en" aria-pressed="false">English</button>
+        <button class="lang-strip-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-strip-btn" data-lang="ta" aria-pressed="false">தமிழ்</button>
+      </div>
+
+      <div class="screen-body">
+        <p class="results-count" data-i18n="resultsCount">3 kerja dijumpai berhampiran anda</p>
+
+        <article class="job-card" data-nav="job-details" data-job="0">
+          <div class="job-card-header">
+            <h3 data-i18n-job="title">Operator Pengeluaran</h3>
+            <span class="badge badge-verified">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="verifiedEmployer">Majikan Disahkan</span>
+            </span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              <span data-i18n-job="location">Shah Alam · 3.2 km</span>
+            </span>
+            <span class="job-salary">RM1,700 – RM2,200</span>
+          </div>
+          <button class="btn btn-primary btn-card"><span data-i18n="viewJob">Lihat kerja</span></button>
+        </article>
+
+        <article class="job-card" data-nav="job-details" data-job="1">
+          <div class="job-card-header">
+            <h3 data-i18n-job="title">Pembantu Gudang</h3>
+            <span class="badge badge-verified">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="verifiedEmployer">Majikan Disahkan</span>
+            </span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              <span data-i18n-job="location">Klang · 8.1 km</span>
+            </span>
+            <span class="job-salary">RM1,800 – RM2,300</span>
+          </div>
+          <button class="btn btn-primary btn-card"><span data-i18n="viewJob">Lihat kerja</span></button>
+        </article>
+
+        <article class="job-card" data-nav="job-details" data-job="2">
+          <div class="job-card-header">
+            <h3 data-i18n-job="title">Pembantu Dapur</h3>
+            <span class="badge badge-verified">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="verifiedEmployer">Majikan Disahkan</span>
+            </span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              <span data-i18n-job="location">Subang Jaya · 5.4 km</span>
+            </span>
+            <span class="job-salary">RM1,600 – RM2,000</span>
+          </div>
+          <button class="btn btn-primary btn-card"><span data-i18n="viewJob">Lihat kerja</span></button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screen 5: Job Details -->
+    <section id="screen-job-details" class="screen" data-screen="job-details">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="job-matches" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Butiran Kerja</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body">
+        <div class="job-detail-hero">
+          <span class="badge badge-verified badge-lg">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Majikan Disahkan
+          </span>
+          <h2 id="detail-title">Operator Pengeluaran</h2>
+          <p class="detail-company" id="detail-company">Kilang Precision Tech Sdn Bhd</p>
+          <div class="detail-tags">
+            <span class="tag" id="detail-location">Shah Alam · 3.2 km</span>
+            <span class="tag tag-salary" id="detail-salary">RM1,700 – RM2,200</span>
+            <span class="tag">Full-time</span>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3>Apa yang anda perlu buat</h3>
+          <ul class="simple-list" id="detail-tasks">
+            <li>Mengendalikan mesin pengeluaran</li>
+            <li>Memastikan barang memenuhi standard kualiti</li>
+            <li>Bekerja dalam pasukan shift</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h3>Syarat mudah</h3>
+          <ul class="simple-list" id="detail-requirements">
+            <li>Boleh membaca arahan asas</li>
+            <li>Sihat tubuh badan</li>
+            <li>Boleh mula segera</li>
+          </ul>
+        </div>
+
+        <div class="detail-section highlight-box">
+          <h3>Faedah</h3>
+          <p id="detail-benefits">KWSP &amp; SOCSO disediakan · Pengangkutan syarikat · Makan tengah hari</p>
+        </div>
+
+        <div class="sticky-actions">
+          <button class="btn btn-primary btn-large btn-full" id="btn-apply">Mohon Sekarang</button>
+          <button class="btn btn-secondary btn-large btn-full" data-nav="career-guide">Perlukan bantuan?</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apply Confirmation Modal -->
+    <div id="modal-apply" class="modal" role="dialog" aria-labelledby="modal-apply-title" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <div class="modal-icon success-icon" aria-hidden="true">✓</div>
+        <h2 id="modal-apply-title">Permohonan dihantar!</h2>
+        <p>Profil anda telah dihantar kepada majikan. Mereka akan hubungi anda dalam 2–3 hari bekerja.</p>
+        <button class="btn btn-primary btn-large btn-full" data-nav="success-progress" data-close-modal="modal-apply">Lihat kemajuan saya</button>
+        <button class="btn btn-text" data-close-modal="modal-apply">Tutup</button>
+      </div>
+    </div>
+
+    <!-- Screen 6: Career Guide -->
+    <section id="screen-career-guide" class="screen" data-screen="career-guide">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="job-details" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Career Guide</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body">
+        <p class="section-intro">Kami jumpa Guide yang sesuai untuk bantu anda:</p>
+
+        <div class="guide-card">
+          <div class="guide-avatar">
+            <span>PA</span>
+            <span class="guide-verified" aria-label="Disahkan">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </span>
+          </div>
+          <div class="guide-info">
+            <h3>Puan Aisyah</h3>
+            <p class="guide-role">Bekas Pegawai HR</p>
+            <div class="guide-rating">
+              <span class="stars" aria-label="Penilaian 4.9 daripada 5">★★★★★</span>
+              <span>4.9 · 87 ulasan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-desc">
+          <p>Boleh bantu semak permohonan dan latihan temuduga.</p>
+        </div>
+
+        <div class="guide-availability">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          <span>Tersedia: Isnin–Jumaat, 10 pagi – 4 petang</span>
+        </div>
+
+        <div class="guide-actions">
+          <button class="btn btn-primary btn-large btn-full" id="btn-book-session">Tempah sesi bantuan</button>
+          <button class="btn btn-secondary btn-large btn-full" data-nav="interview-practice">Mulakan latihan temuduga</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 7: Interview Practice -->
+    <section id="screen-interview-practice" class="screen" data-screen="interview-practice">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="career-guide" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Latihan Temuduga</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body">
+        <div class="practice-progress">
+          <span class="progress-label">Soalan 1 daripada 3</span>
+          <div class="progress-bar"><div class="progress-fill" style="width: 33%"></div></div>
+        </div>
+
+        <div class="interview-question">
+          <div class="question-avatar" aria-hidden="true">🎙️</div>
+          <div class="question-bubble">
+            <p>Ceritakan pengalaman anda bekerja dalam pasukan.</p>
+          </div>
+        </div>
+
+        <div class="voice-section voice-section-sm">
+          <button class="mic-button mic-button-sm" id="btn-mic-practice" aria-label="Tekan dan jawab">
+            <div class="mic-ring"></div>
+            <div class="mic-inner">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              </svg>
+            </div>
+          </button>
+          <p class="mic-label">Tekan dan jawab</p>
+        </div>
+
+        <div class="feedback-card" id="feedback-card" hidden>
+          <div class="feedback-header">
+            <span class="feedback-icon" aria-hidden="true">💪</span>
+            <strong>Maklum balas AI</strong>
+          </div>
+          <p>Bagus! Anda memberi contoh spesifik tentang kerja berpasukan. Cuba tambah satu contoh bila anda bantu rakan sekerja menyelesaikan masalah. Ini menunjukkan anda peka dan bekerjasama.</p>
+        </div>
+
+        <button class="btn btn-primary btn-large btn-full" id="btn-next-question" hidden data-nav="success-progress">
+          Teruskan
+        </button>
+      </div>
+    </section>
+
+    <!-- Screen 8: Success / Progress -->
+    <section id="screen-success-progress" class="screen" data-screen="success-progress">
+      <header class="screen-header">
+        <button class="btn-back" data-nav="welcome" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Kemajuan Anda</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body">
+        <div class="success-banner">
+          <div class="success-icon-lg" aria-hidden="true">🎉</div>
+          <h2>Bagus! Anda sudah selangkah lebih dekat kepada kerja baharu.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item completed">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Profil dicipta</h4>
+              <p>Operator Kilang · Shah Alam</p>
+            </div>
+          </div>
+          <div class="timeline-item completed">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Permohonan dihantar</h4>
+              <p>Operator Pengeluaran · Kilang Precision Tech</p>
+            </div>
+          </div>
+          <div class="timeline-item completed">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Bantuan Guide</h4>
+              <p>Puan Aisyah · Sesi dijadualkan Jumaat, 2 petang</p>
+            </div>
+          </div>
+          <div class="timeline-item active">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Temuduga dijadualkan</h4>
+              <p>Isnin depan, 10 pagi · Shah Alam</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-large btn-full" data-nav="job-seeker-home">
+          Kembali ke laman utama
+        </button>
+
+        <button class="btn btn-text btn-report" id="btn-report">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+          Laporkan tawaran mencurigakan
+        </button>
+      </div>
+    </section>
+
+    <!-- Screen 9: Career Guide Dashboard -->
+    <section id="screen-guide-dashboard" class="screen" data-screen="guide-dashboard">
+      <header class="screen-header screen-header-dark">
+        <button class="btn-back btn-back-light" data-nav="welcome" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title">Dashboard Guide</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body guide-body">
+        <div class="guide-welcome-card">
+          <div class="guide-welcome-text">
+            <p class="guide-greeting">Selamat pagi,</p>
+            <h2>Encik Razak</h2>
+            <span class="badge badge-verified badge-sm">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Guide Disahkan
+            </span>
+          </div>
+          <div class="legacy-score">
+            <span class="legacy-label">Legacy Score</span>
+            <span class="legacy-value">240</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">12</span>
+            <span class="stat-label">pencari kerja dibantu bulan ini</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">3</span>
+            <span class="stat-label">permintaan menunggu</span>
+          </div>
+        </div>
+
+        <h3 class="section-heading">Permintaan Menunggu</h3>
+        <div class="request-card">
+          <div class="request-avatar">S</div>
+          <div class="request-info">
+            <h4>Siti Aminah</h4>
+            <p>Perlukan bantuan semak permohonan · Operator Kilang</p>
+            <span class="request-time">2 jam lalu</span>
+          </div>
+          <button class="btn btn-primary btn-sm">Terima</button>
+        </div>
+        <div class="request-card">
+          <div class="request-avatar">K</div>
+          <div class="request-info">
+            <h4>Kumar Raj</h4>
+            <p>Latihan temuduga · Pembantu Gudang</p>
+            <span class="request-time">5 jam lalu</span>
+          </div>
+          <button class="btn btn-primary btn-sm">Terima</button>
+        </div>
+        <div class="request-card">
+          <div class="request-avatar">L</div>
+          <div class="request-info">
+            <h4>Lee Wei Ming</h4>
+            <p>Semak resume · Pembantu Dapur</p>
+            <span class="request-time">Semalam</span>
+          </div>
+          <button class="btn btn-primary btn-sm">Terima</button>
+        </div>
+
+        <h3 class="section-heading">Sesi Akan Datang</h3>
+        <div class="session-card">
+          <div class="session-date">
+            <span class="session-day">Jum</span>
+            <span class="session-num">22</span>
+          </div>
+          <div class="session-info">
+            <h4>Siti Aminah — Semak permohonan</h4>
+            <p>2:00 petang · 30 minit</p>
+          </div>
+        </div>
+        <div class="session-card">
+          <div class="session-date">
+            <span class="session-day">Isn</span>
+            <span class="session-num">25</span>
+          </div>
+          <div class="session-info">
+            <h4>Kumar Raj — Latihan temuduga</h4>
+            <p>10:00 pagi · 45 minit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
