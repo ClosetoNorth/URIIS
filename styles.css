@@ -1392,13 +1392,12 @@ body {
 
   .app {
     border-radius: var(--radius-lg);
-    min-height: 780px;
-    max-height: 90dvh;
+    height: min(780px, calc(100dvh - 4rem));
     overflow: hidden;
   }
 
   .screen {
-    min-height: 780px;
-    max-height: 90dvh;
+    min-height: 0;
+    height: 100%;
   }
 }
