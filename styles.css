@@ -49,25 +49,28 @@ body {
 }
 
 .app {
+  width: min(100%, var(--max-width));
   max-width: var(--max-width);
   margin: 0 auto;
-  min-height: 100dvh;
+  height: 100dvh;
   background: var(--white);
   position: relative;
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
 }
 
 /* Screens */
 .screen {
   display: none;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 0;
+  height: 100%;
   animation: fadeIn 0.35s ease;
 }
 
 .screen.active {
   display: flex;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -79,6 +82,7 @@ body {
 #screen-welcome {
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 55%, var(--white) 55%);
   padding: 2rem 1.25rem 1.5rem;
+  overflow-y: auto;
 }
 
 .welcome-header {
@@ -278,8 +282,14 @@ body {
 /* Screen Body */
 .screen-body {
   flex: 1;
+  min-height: 0;
   padding: 1.25rem 1.25rem 2rem;
   overflow-y: auto;
+  background-attachment: local;
+}
+
+#screen-job-seeker-home .screen-body {
+  background-color: var(--white);
 }
 
 .greeting {
