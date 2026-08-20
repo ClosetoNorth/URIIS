@@ -491,10 +491,11 @@
               <span data-i18n="guideVerified">Guide Disahkan</span>
             </span>
           </div>
-          <div class="legacy-score">
+          <button class="legacy-score legacy-score-button" type="button" data-nav="guide-rewards" data-i18n-aria="rewardsOpen" aria-label="Lihat ganjaran yang boleh ditebus">
             <span class="legacy-label" data-i18n="legacyScore">Legacy Score</span>
             <span class="legacy-value">240</span>
-          </div>
+            <span class="legacy-redeem" data-i18n="rewardsOpen">Lihat ganjaran</span>
+          </button>
         </div>
 
         <div class="stats-grid">
@@ -561,7 +562,66 @@
       </div>
     </section>
 
-    <!-- Screen 10: Career Guide Sample Chat -->
+    <!-- Screen 10: Guide Rewards -->
+    <section id="screen-guide-rewards" class="screen" data-screen="guide-rewards">
+      <header class="screen-header screen-header-dark">
+        <button class="btn-back btn-back-light" data-nav="guide-dashboard" data-i18n-aria="back" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 class="screen-title" data-i18n="rewardsTitle">Ganjaran Guide</h1>
+        <div class="header-spacer"></div>
+      </header>
+
+      <div class="screen-body rewards-body">
+        <div class="points-balance">
+          <span data-i18n="pointsBalanceLabel">Baki mata anda</span>
+          <strong>240</strong>
+          <span data-i18n="pointsUnit">mata</span>
+        </div>
+        <p class="section-intro" data-i18n="rewardsIntro">Tebus ganjaran untuk menghargai bantuan anda kepada pencari kerja.</p>
+
+        <article class="reward-card">
+          <div class="reward-icon" aria-hidden="true">🩺</div>
+          <div class="reward-info">
+            <span class="reward-type" data-i18n="rewardServiceType">Perkhidmatan</span>
+            <h2 data-i18n="rewardServiceTitle">Sesi pembangunan kemahiran</h2>
+            <p data-i18n="rewardServiceDesc">Sesi bimbingan profesional selama 30 minit.</p>
+          </div>
+          <div class="reward-action">
+            <span>120 <span data-i18n="pointsShort">mata</span></span>
+            <button class="btn btn-primary btn-sm btn-redeem" type="button" data-i18n="redeem">Tebus</button>
+          </div>
+        </article>
+
+        <article class="reward-card">
+          <div class="reward-icon" aria-hidden="true">🚌</div>
+          <div class="reward-info">
+            <span class="reward-type" data-i18n="rewardVoucherType">Baucar</span>
+            <h2 data-i18n="rewardVoucherTitle">Baucar pengangkutan RM10</h2>
+            <p data-i18n="rewardVoucherDesc">Untuk perjalanan ke sesi bimbingan atau temu duga.</p>
+          </div>
+          <div class="reward-action">
+            <span>80 <span data-i18n="pointsShort">mata</span></span>
+            <button class="btn btn-primary btn-sm btn-redeem" type="button" data-i18n="redeem">Tebus</button>
+          </div>
+        </article>
+
+        <article class="reward-card">
+          <div class="reward-icon" aria-hidden="true">💊</div>
+          <div class="reward-info">
+            <span class="reward-type" data-i18n="rewardDiscountType">Diskaun</span>
+            <h2 data-i18n="rewardDiscountTitle">Diskaun 20% kursus kemahiran</h2>
+            <p data-i18n="rewardDiscountDesc">Sah untuk kursus rakan latihan yang terpilih.</p>
+          </div>
+          <div class="reward-action">
+            <span>160 <span data-i18n="pointsShort">mata</span></span>
+            <button class="btn btn-primary btn-sm btn-redeem" type="button" data-i18n="redeem">Tebus</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screen 11: Career Guide Sample Chat -->
     <section id="screen-guide-chat" class="screen" data-screen="guide-chat">
       <header class="screen-header screen-header-dark">
         <button class="btn-back btn-back-light" data-nav="guide-dashboard" aria-label="Kembali">

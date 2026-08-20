@@ -229,7 +229,24 @@ const i18n = {
     chatInputLabel: 'Tulis mesej',
     chatPlaceholder: 'Tulis mesej kepada pencari kerja...',
     chatSend: 'Hantar',
-    chatReply: 'Terima kasih. Saya akan semak maklumat itu dan bantu anda dengan langkah seterusnya.'
+    chatReply: 'Terima kasih. Saya akan semak maklumat itu dan bantu anda dengan langkah seterusnya.',
+    rewardsOpen: 'Lihat ganjaran',
+    rewardsTitle: 'Ganjaran Guide',
+    pointsBalanceLabel: 'Baki mata anda',
+    pointsUnit: 'mata',
+    pointsShort: 'mata',
+    rewardsIntro: 'Tebus ganjaran untuk menghargai bantuan anda kepada pencari kerja.',
+    rewardServiceType: 'Perkhidmatan',
+    rewardServiceTitle: 'Saringan kesihatan asas',
+    rewardServiceDesc: 'Pemeriksaan kesihatan asas di klinik rakan kami.',
+    rewardVoucherType: 'Baucar',
+    rewardVoucherTitle: 'Baucar pengangkutan RM10',
+    rewardVoucherDesc: 'Untuk perjalanan ke sesi bimbingan atau temu duga.',
+    rewardDiscountType: 'Diskaun',
+    rewardDiscountTitle: 'Diskaun 20% di farmasi rakan',
+    rewardDiscountDesc: 'Sah untuk barangan kesihatan terpilih di farmasi rakan.',
+    redeem: 'Tebus',
+    toastRedeemed: 'Ganjaran anda telah ditebus!'
   },
   en: {
     headline: 'Finding work, made easier.',
@@ -338,7 +355,24 @@ const i18n = {
     chatInputLabel: 'Write a message',
     chatPlaceholder: 'Write a message to the job seeker...',
     chatSend: 'Send',
-    chatReply: 'Thank you. I’ll review that information and help you with the next steps.'
+    chatReply: 'Thank you. I’ll review that information and help you with the next steps.',
+    rewardsOpen: 'View rewards',
+    rewardsTitle: 'Guide Rewards',
+    pointsBalanceLabel: 'Your points balance',
+    pointsUnit: 'points',
+    pointsShort: 'pts',
+    rewardsIntro: 'Redeem rewards to recognise the support you give job seekers.',
+    rewardServiceType: 'Service',
+    rewardServiceTitle: 'Basic health screening',
+    rewardServiceDesc: 'A basic health check at one of our partner clinics.',
+    rewardVoucherType: 'Voucher',
+    rewardVoucherTitle: 'RM10 transport voucher',
+    rewardVoucherDesc: 'For travel to a guidance session or interview.',
+    rewardDiscountType: 'Discount',
+    rewardDiscountTitle: '20% off at partner pharmacies',
+    rewardDiscountDesc: 'Valid for selected health items at partner pharmacies.',
+    redeem: 'Redeem',
+    toastRedeemed: 'Your reward has been redeemed!'
   },
   zh: {
     headline: '求职，更轻松。',
@@ -447,7 +481,24 @@ const i18n = {
     chatInputLabel: '输入消息',
     chatPlaceholder: '向求职者输入消息…',
     chatSend: '发送',
-    chatReply: '谢谢。我会查看这些资料，并协助您完成下一步。'
+    chatReply: '谢谢。我会查看这些资料，并协助您完成下一步。',
+    rewardsOpen: '查看奖励',
+    rewardsTitle: '导师奖励',
+    pointsBalanceLabel: '您的积分余额',
+    pointsUnit: '积分',
+    pointsShort: '积分',
+    rewardsIntro: '兑换奖励，感谢您为求职者提供的帮助。',
+    rewardServiceType: '服务',
+    rewardServiceTitle: '基本健康检查',
+    rewardServiceDesc: '在合作诊所进行基本健康检查。',
+    rewardVoucherType: '代金券',
+    rewardVoucherTitle: 'RM10 交通代金券',
+    rewardVoucherDesc: '可用于前往辅导课程或面试的交通。',
+    rewardDiscountType: '折扣',
+    rewardDiscountTitle: '合作药房 20% 折扣',
+    rewardDiscountDesc: '适用于合作药房指定的健康用品。',
+    redeem: '兑换',
+    toastRedeemed: '您的奖励已兑换！'
   },
   ta: {
     headline: 'வேலை தேடுவது இப்போது எளிது.',
@@ -556,7 +607,24 @@ const i18n = {
     chatInputLabel: 'செய்தி எழுதவும்',
     chatPlaceholder: 'வேலை தேடுபவருக்கு செய்தி எழுதவும்...',
     chatSend: 'அனுப்பு',
-    chatReply: 'நன்றி. அந்தத் தகவலைப் பார்த்து, அடுத்த படிகளுக்கு உங்களுக்கு உதவுகிறேன்.'
+    chatReply: 'நன்றி. அந்தத் தகவலைப் பார்த்து, அடுத்த படிகளுக்கு உங்களுக்கு உதவுகிறேன்.',
+    rewardsOpen: 'வெகுமதிகளைப் பார்க்கவும்',
+    rewardsTitle: 'வழிகாட்டி வெகுமதிகள்',
+    pointsBalanceLabel: 'உங்கள் புள்ளி இருப்பு',
+    pointsUnit: 'புள்ளிகள்',
+    pointsShort: 'புள்ளிகள்',
+    rewardsIntro: 'வேலை தேடுபவர்களுக்கு நீங்கள் வழங்கும் உதவியைப் பாராட்ட வெகுமதிகளைப் பெறுங்கள்.',
+    rewardServiceType: 'சேவை',
+    rewardServiceTitle: 'அடிப்படை சுகாதார பரிசோதனை',
+    rewardServiceDesc: 'எங்கள் கூட்டாளர் மருத்துவமனையில் அடிப்படை சுகாதாரப் பரிசோதனை.',
+    rewardVoucherType: 'வவுச்சர்',
+    rewardVoucherTitle: 'RM10 போக்குவரத்து வவுச்சர்',
+    rewardVoucherDesc: 'வழிகாட்டல் அமர்வு அல்லது நேர்காணலுக்கான பயணத்திற்கு.',
+    rewardDiscountType: 'தள்ளுபடி',
+    rewardDiscountTitle: 'கூட்டாளர் மருந்தகங்களில் 20% தள்ளுபடி',
+    rewardDiscountDesc: 'கூட்டாளர் மருந்தகங்களில் தேர்ந்தெடுக்கப்பட்ட சுகாதாரப் பொருட்களுக்கு செல்லுபடியாகும்.',
+    redeem: 'பெறுங்கள்',
+    toastRedeemed: 'உங்கள் வெகுமதி பெறப்பட்டது!'
   }
 };
 
@@ -761,6 +829,12 @@ function setupGuideBooking() {
   });
 }
 
+function setupRewardRedemption() {
+  document.querySelectorAll('.btn-redeem').forEach(button => {
+    button.addEventListener('click', () => showToast('toastRedeemed'));
+  });
+}
+
 function appendChatMessage(text, sender) {
   const messages = document.getElementById('chat-messages');
   if (!messages) return;
@@ -811,6 +885,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupApplyFlow();
   setupInterviewPractice();
   setupGuideBooking();
+  setupRewardRedemption();
   setupGuideChat();
   setupReportButton();
   setLanguage('ms');

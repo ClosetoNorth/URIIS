@@ -81,6 +81,7 @@ body {
 /* Welcome Screen */
 #screen-welcome {
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 55%, var(--white) 55%);
+  background-attachment: local;
   padding: 2rem 1.25rem 1.5rem;
   overflow-y: auto;
 }
@@ -1217,6 +1218,20 @@ body {
   padding: 0.75rem 1rem;
 }
 
+.legacy-score-button {
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.legacy-score-button:hover,
+.legacy-score-button:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
 .legacy-label {
   display: block;
   font-size: 0.6875rem;
@@ -1229,6 +1244,14 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: var(--yellow);
+}
+
+.legacy-redeem {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .stats-grid {
@@ -1356,6 +1379,102 @@ body {
 .session-info p {
   font-size: 0.8125rem;
   color: var(--gray-600);
+}
+
+/* Guide Rewards */
+.rewards-body {
+  background: var(--off-white);
+}
+
+.points-balance {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 0.375rem;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  color: var(--white);
+  text-align: center;
+}
+
+.points-balance > :first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+.points-balance strong {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.points-balance > :last-child {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.reward-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.reward-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--teal-pale);
+  font-size: 1.25rem;
+}
+
+.reward-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.reward-type {
+  display: block;
+  color: var(--teal);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.reward-info h2 {
+  margin: 0.125rem 0;
+  color: var(--navy);
+  font-size: 0.875rem;
+}
+
+.reward-info p {
+  color: var(--gray-600);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.reward-action {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Guide Chat */
